@@ -3,10 +3,20 @@
 
 ClassImp(DATA);
 
-DATA::DATA() : px(0), py(0), pz(0) {}  // Default zero
+DATA::DATA() : 
+px(0), py(0), pz(0) 
+{
+}
 
-DATA::DATA(Double_t x, Double_t y, Double_t z) : px(x), py(y), pz(z) {}  // Parameterized constructor
+DATA::DATA(Float_t x, Float_t y, Float_t z) : 
+px(x), py(y), pz(z) 
+{
+}
 
-Double_t DATA::Magnitude() {
-    return std::sqrt(px * px + py * py + pz * pz);  // Calculates magnitude
+DATA::~DATA() 
+{
+}
+
+Float_t DATA::Magnitude() const {
+    return std::sqrt(px * px + py * py + pz * pz);
 }
